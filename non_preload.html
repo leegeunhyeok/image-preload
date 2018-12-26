@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Non preload</title>
+    <script>
+      var time = new Date().getTime()
+
+      window.onload = function () {
+        setTimeout(function () {
+          alert('Show image')
+        }, 3000)
+      }
+    </script>
+  </head>
+  <body>
+    <div id="content"></div>
+  </body>
+</html>
