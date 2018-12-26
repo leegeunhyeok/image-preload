@@ -31,19 +31,21 @@
 
       window.onload = function () {
         setTimeout(function () {
+          document.getElementById('wait').style.display = 'none'
           var content = document.getElementById('content')
           var imageHtml = ''
 
           for (var i = 0; i < imageList.length; i++) {
             imageHtml += '<img src="./img/' + imageList[i] + '?' + time + '">'
           }
-          
+
           content.innerHTML = imageHtml
         }, 3000)
       }
     </script>
   </head>
   <body>
+    <h2 id="wait">Show images after 3 sec..</h2>
     <div id="content"></div>
   </body>
 </html>
