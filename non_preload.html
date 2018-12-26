@@ -25,16 +25,24 @@
       var time = new Date().getTime()
 
       window.onload = function () {
+        // 3초 이후 호출
         setTimeout(function () {
+          // Body 색상 #888888로 설정
           document.body.style.backgroundColor = '#888'
+
+          // 대기 메시지 숨김
           document.getElementById('wait').style.display = 'none'
+
+          // 이미지 추가 영역
           var content = document.getElementById('content')
           var imageHtml = ''
 
           for (var i = 0; i < imageList.length; i++) {
+            // time 추가 이유: 캐싱된 이미지 로드 방지
             imageHtml += '<img src="./img/' + imageList[i] + '?' + time + '">'
           }
-
+          
+          // 내용 추가
           content.innerHTML = imageHtml
         }, 3000)
       }
